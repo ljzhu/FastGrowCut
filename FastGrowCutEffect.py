@@ -126,9 +126,6 @@ class FastGrowCutEffectOptions(EditorLib.LabelEffectOptions):
     super(FastGrowCutEffectOptions,self).updateGUIFromMRML(caller,event)
     self.connectWidgets()
 
-  #def onApply(self):
-  #  print('This is just an example - nothing here yet')
-
   def updateMRMLFromGUI(self):
     if self.updatingGUI:
       return
@@ -240,14 +237,6 @@ class FastGrowCutEffectLogic(LabelEffect.LabelEffectLogic):
     #initialize Fast GrowCut
     self.init_fGrowCut()
     
-    #~ self.currSlice = None
-    #~ self.ijkPlane = 'IJ'
-    #~ self.sw = slicer.app.layoutManager().sliceWidget('Red')
-    #~ self.interactor = self.sw.sliceView().interactor() #initialize to red slice interactor
-    
-    #~ self.mouse_obs_growcut, self.swLUT_growcut = bind_view_observers(self.entranceCursorDetect)
-
-    #self.fullInitialized=False #tracks if completed the initializtion (so can do stop correctly) of Fast GrowCut
     self.fastCrowCutCreated=False
   
   def init_fGrowCut(self):
@@ -471,10 +460,7 @@ class FastGrowCutEffectLogic(LabelEffect.LabelEffectLogic):
     
     # remove GrowCut observer
     self.sliceLogic.RemoveObserver(self.fGCLabelMod_tag)
-    print("Fast GrowCut deletion completed")
-    	    
-    #if self.fastCrowCutCreated==False: #if initialized, remove, otherwise do nothing
-    #    return
+
     #put back the editor shortcuts we removed
     slicer.modules.EditorWidget.installShortcutKeys()
 
