@@ -417,7 +417,7 @@ class FastGrowCutEffectLogic(LabelEffect.LabelEffectLogic):
         self.labelNode.Modified()
 		
         print('show seed image')
-        self.currentMessage = "Fast GrowCut: seed image is shown. Go to PaintEffect to refine foreground and background seeds if necessary, and press 'G' to run fast GrowCut"
+        self.currentMessage = "Fast GrowCut: seed image is shown. Press 'S' to segmentation result; Or go to PaintEffect to refine foreground and background seeds if necessary, and press 'G' to run fast GrowCut"
         slicer.util.showStatusMessage(self.currentMessage)
     else:
         if self.growCutSegArray.any() != 0 :
