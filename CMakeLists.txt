@@ -25,14 +25,6 @@ set(MODULE_PYTHON_RESOURCES
 find_package(Slicer REQUIRED)
 include(${Slicer_USE_FILE})
 
-#-----------------------------------------------------------------------------
-#ctkMacroCompilePythonScript(
- # TARGET_NAME ${MODULE_NAME}
- # SCRIPTS "${MODULE_PYTHON_SCRIPTS}"
-  #RESOURCES "${MODULE_PYTHON_RESOURCES}"
-  #DESTINATION_DIR ${CMAKE_BINARY_DIR}/${Slicer_QTSCRIPTEDMODULES_LIB_DIR}
-  #INSTALL_DIR ${Slicer_INSTALL_ROOT}
-  #)
   
 add_subdirectory(FastGrowCut)
 
@@ -45,9 +37,5 @@ slicerMacroBuildScriptedModule(
 #-----------------------------------------------------------------------------
 include(${Slicer_EXTENSION_CPACK})
 
-#-----------------------------------------------------------------------------
-if(BUILD_TESTING)
-  add_subdirectory(Testing)
-endif()
 
 
