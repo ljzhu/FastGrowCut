@@ -23,7 +23,7 @@ class VTK_SLICER_FASTGROWCUT_MODULE_LOGIC_EXPORT vtkFastGrowCutSeg : public vtkO
 
 public:
   static vtkFastGrowCutSeg* New();
-  vtkTypeRevisionMacro(vtkFastGrowCutSeg,vtkObject);
+  //vtkTypeRevisionMacro(vtkFastGrowCutSeg,vtkObject);
   //vtkTypeMacro(vtkKSlice,vtkObject);
 
 
