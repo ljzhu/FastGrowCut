@@ -171,8 +171,8 @@ void FastGrowCut<SrcPixelType, LabPixelType>
     HeapNode *hnMin, hnTmp;
     float t, tOri, tSrc;
     long i, index, indexNgbh;
-    char labSrc;
-    int pixCenter;
+    LabPixelType labSrc;
+    SrcPixelType pixCenter;
 
     // Insert 0 then extract it, which will balance heap
     m_heap->Insert(&hnTmp); m_heap->ExtractMin();
